@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test</string>
+    <string name="titulo_app">Test Bus</string>
+    <string name="textoLinea">Line: </string>
+    <string name="textoParada">Bus Stop: </string>
+    <string name="textoDestino">Destination: </string>
+    <string name="textoHora">Hour: </string>
+    <string name="textoBotonProgramarAlarma">Set Alarm</string>
+</resources>
