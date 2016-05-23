@@ -16,14 +16,13 @@ public class MainActivity extends AppCompatActivity {
     final Button btnBuscar = (Button)findViewById(R.id.btnBuscar);
     final EditText txtParada = (EditText)findViewById(R.id.editParada);
     final Spinner cmbLineas = (Spinner)findViewById(R.id.spinnerLinea);
-    final Spinner cmbHoras = (Spinner)findViewById(R.id.spinnerHora);
     final Spinner cmbDestino = (Spinner)findViewById(R.id.spinnerDestino);
     final String[] numeroLinea = new String[]{"Linea1","Linea2","Linea3","Linea4","Linea5"};
-    final ArrayAdapter<String> adaptadorLineas = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, numeroLinea);
+    final ArrayAdapter<String> adaptadorLineas = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, numeroLinea);
     final String [] horasDePaso = new String[] {"08:00","09:00","10:00","11:00","12:00"};
-    final ArrayAdapter<String> adaptadorHoras = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, horasDePaso);
+    final ArrayAdapter<String> adaptadorHoras = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, horasDePaso);
     final String [] paradaDestino = new String [] {"250", "300", "500"};
-    final ArrayAdapter <String> adaptadorDestino = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, paradaDestino);
+    final ArrayAdapter <String> adaptadorDestino = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, paradaDestino);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Bundle bundle = new Bundle();
                 bundle.putString("Parada", txtParada.getText().toString());
+                bundle.putString("Destino", "Destino");
                 intent.putExtras(bundle);
 
             startActivity(intent);
